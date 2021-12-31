@@ -49,7 +49,7 @@
 在本项目中，使用的是PixelBert模型及其改进(将backbone从ResNet50改为带GC Attentionn的ResNet50)
 
 预训练时的网络结构为:
-![pixelbert for pretraining's architecture](./imgs/pixelbert-pretraining.png)
+![pixelbert for pretraining's architecture](./imgs/pixelbert-pretrain.png)
 
 进行VQA Fintuining时的网络结构为
 ![pixelbert for vqa architecture](./imgs/pixelbert-vqa.png)
@@ -462,17 +462,3 @@ unzip data.zip
     ├── log
     └── results_valstep_26400
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
