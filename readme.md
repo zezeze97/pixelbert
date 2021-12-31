@@ -154,9 +154,9 @@ unzip data.zip
     # pretraining resnet50 vqa full data
     horovodrun -np 1 python run_pretrain_resnet50_fulldata.py \
         --config src/configs/pretrain_image_text_base_resnet50_mlm_itm.json \
-        --output_dir  /home/zhangzr/vision_and_language_data/resnet50_pretrain_output
+        --output_dir  ../vision_and_language_data/resnet50_pretrain_output
 
-    tensorboard --logdir=/home/zhangzr/vision_and_language_data/resnet50_pretrain_output/log/ --host=162.105.94.222
+    tensorboard --logdir=../vision_and_language_data/resnet50_pretrain_output/log/ --host=162.105.94.222
     ```
 
 2. 完整数据预训练之后，对pixelbert-resnet50 进行vqa FineTuning
@@ -174,11 +174,11 @@ unzip data.zip
     ```sh
     # resnet50-vqa
     horovodrun -np 1 python run_vqa_resnet50.py \
-        --config /home/zhangzr/pixelbert/src/configs/vqa_base_resnet50.json \
-        --output_dir /home/zhangzr/vision_and_language_data/resnet50_vqa_result
+        --config src/configs/vqa_base_resnet50.json \
+        --output_dir ../vision_and_language_data/resnet50_vqa_result
 
 
-    tensorboard --logdir=/home/zhangzr/vision_and_language_data/resnet50_vqa_result/log/ --host=162.105.94.222
+    tensorboard --logdir=../vision_and_language_data/resnet50_vqa_result/log/ --host=162.105.94.222
     ```
 
 3. 使用完整数据预训练pixelbert-resnet50withgcb
@@ -196,9 +196,9 @@ unzip data.zip
     # pretraining resnet50withgcb vqa full data
     horovodrun -np 1 python run_pretrain_resnet50with_gcb.py \
         --config src/configs/pretrain_image_text_base_resnet50withgcb_mlm_itm.json \
-        --output_dir  /home/zhangzr/vision_and_language_data/resnet50withgcb_pretrain_output
+        --output_dir  ../vision_and_language_data/resnet50withgcb_pretrain_output
 
-    tensorboard --logdir=/home/zhangzr/vision_and_language_data/resnet50withgcb_pretrain_output/log/ --host=162.105.94.222
+    tensorboard --logdir=../vision_and_language_data/resnet50withgcb_pretrain_output/log/ --host=162.105.94.222
     ```
 
 4. 完整数据预训练之后，对pixelbert-resnet50withgcb vqa 进行vqa FineTuning
@@ -216,11 +216,11 @@ unzip data.zip
     ```sh
     # resnet50withgcb vqa
     horovodrun -np 1 python run_vqa_resnet50with_gcb.py \
-        --config /home/zhangzr/pixelbert/src/configs/vqa_base_resnet50_with_gcb.json \
-        --output_dir /home/zhangzr/vision_and_language_data/resnet50_with_gcb_vqa_result/
+        --config src/configs/vqa_base_resnet50_with_gcb.json \
+        --output_dir ../vision_and_language_data/resnet50_with_gcb_vqa_result/
 
 
-    tensorboard --logdir=/home/zhangzr/vision_and_language_data/resnet50_with_gcb_vqa_result/log/ --host=162.105.94.222
+    tensorboard --logdir=../vision_and_language_data/resnet50_with_gcb_vqa_result/log/ --host=162.105.94.222
     ```
 
 5. 只使用coco数据预训练pixelbert-resnet50withgcb
@@ -238,9 +238,9 @@ unzip data.zip
     # pretraining resnet50withgcb vqa less data
     horovodrun -np 1 python run_pretrain_resnet50with_gcb.py \
         --config src/configs/pretrain_image_text_base_resnet50withgcb_mlm_itm_coco_cap.json\
-        --output_dir  /home/zhangzr/vision_and_language_data/resnet50withgcb_lessdata_pretrain_lessdata_output
+        --output_dir  ../vision_and_language_data/resnet50withgcb_lessdata_pretrain_lessdata_output
 
-    tensorboard --logdir=/home/zhangzr/vision_and_language_data/resnet50withgcb_lessdata_pretrain_lessdata_output/log/ --host=162.105.94.222
+    tensorboard --logdir=../vision_and_language_data/resnet50withgcb_lessdata_pretrain_lessdata_output/log/ --host=162.105.94.222
     ```
 6. 只使用coco数据预训练pixelbert-resnet50withgcb后进行vqa FineTuning
     ```sh
@@ -256,11 +256,11 @@ unzip data.zip
     ```sh
     # resnet50withgcb vqa lessdata
     horovodrun -np 1 python run_vqa_resnet50with_gcb.py \
-        --config /home/zhangzr/pixelbert/src/configs/vqa_base_resnet50_with_gcb_lessdata.json \
-        --output_dir /home/zhangzr/vision_and_language_data/resnet50_with_gcb_vqa_lessdata_result/
+        --config src/configs/vqa_base_resnet50_with_gcb_lessdata.json \
+        --output_dir ../vision_and_language_data/resnet50_with_gcb_vqa_lessdata_result/
 
 
-    tensorboard --logdir=/home/zhangzr/vision_and_language_data/resnet50_with_gcb_vqa_lessdata_result/log/ --host=162.105.94.222
+    tensorboard --logdir=../vision_and_language_data/resnet50_with_gcb_vqa_lessdata_result/log/ --host=162.105.94.222
 
     ```
 
@@ -278,10 +278,10 @@ unzip data.zip
     ```sh
     # pretraining resnet50 vqa less data
     horovodrun -np 1 python run_pretrain_resnet50_lessdata.py \
-        --config /home/zhangzr/pixelbert/src/configs/pretrain_image_text_base_resnet50_mlm_itm_coco_cap.json\
-        --output_dir  /home/zhangzr/vision_and_language_data/resnet50_pretrain_lessdata_output
+        --config src/configs/pretrain_image_text_base_resnet50_mlm_itm_coco_cap.json\
+        --output_dir  ../vision_and_language_data/resnet50_pretrain_lessdata_output
 
-    tensorboard --logdir=/home/zhangzr/vision_and_language_data/resnet50_pretrain_lessdata_output/log/ --host=162.105.94.222
+    tensorboard --logdir=../vision_and_language_data/resnet50_pretrain_lessdata_output/log/ --host=162.105.94.222
 
     ```
 
@@ -299,11 +299,11 @@ unzip data.zip
     ```sh
     # resnet50 vqa lessdata
     horovodrun -np 1 python run_vqa_resnet50_lessdata.py \
-        --config /home/zhangzr/pixelbert/src/configs/vqa_base_resnet50_lessdata.json \
-        --output_dir /home/zhangzr/vision_and_language_data/resnet50_vqa_lessdata_result/
+        --config src/configs/vqa_base_resnet50_lessdata.json \
+        --output_dir ../vision_and_language_data/resnet50_vqa_lessdata_result/
 
 
-    tensorboard --logdir=/home/zhangzr/vision_and_language_data/resnet50_vqa_lessdata_result/log/ --host=162.105.94.222
+    tensorboard --logdir=../vision_and_language_data/resnet50_vqa_lessdata_result/log/ --host=162.105.94.222
     ```
 ### 预测
 
@@ -324,10 +324,10 @@ unzip data.zip
    ```shell
     # inference resnet50-vqa
     horovodrun -np 1 python run_vqa_resnet50.py \
-    --do_inference 1 --output_dir /home/zhangzr/vision_and_language_data/resnet50_vqa_result \
+    --do_inference 1 --output_dir ../vision_and_language_data/resnet50_vqa_result \
     --inference_split val --inference_model_step 22400 \
-    --inference_txt_db /home/zhangzr/vision_and_language_data/data/txt_db/vqa/vqa_k_test.jsonl \
-    --inference_img_db /home/zhangzr/vision_and_language_data/data/vis_db/coco_train2014_val2014 \
+    --inference_txt_db ../vision_and_language_data/data/txt_db/vqa/vqa_k_test.jsonl \
+    --inference_img_db ../vision_and_language_data/data/vis_db/coco_train2014_val2014 \
     --inference_batch_size 32
    ```
 
@@ -347,10 +347,10 @@ unzip data.zip
    ```shell
     # inference resnet50 vqa lessdata
     horovodrun -np 1 python run_vqa_resnet50_lessdata.py \
-    --do_inference 1 --output_dir /home/zhangzr/vision_and_language_data/resnet50_vqa_lessdata_result\
+    --do_inference 1 --output_dir ../vision_and_language_data/resnet50_vqa_lessdata_result\
     --inference_split val --inference_model_step 89900 \
-    --inference_txt_db /home/zhangzr/vision_and_language_data/data/txt_db/vqa/vqa_k_test.jsonl \
-    --inference_img_db /home/zhangzr/vision_and_language_data/data/vis_db/coco_train2014_val2014 \
+    --inference_txt_db ../vision_and_language_data/data/txt_db/vqa/vqa_k_test.jsonl \
+    --inference_img_db ../vision_and_language_data/data/vis_db/coco_train2014_val2014 \
     --inference_batch_size 2
    ```
 
@@ -371,10 +371,10 @@ unzip data.zip
    ```shell
     # inference resnet50withgcb vqa
     horovodrun -np 1 python run_vqa_resnet50with_gcb.py \
-    --do_inference 1 --output_dir /home/zhangzr/vision_and_language_data/resnet50_with_gcb_vqa_result\
+    --do_inference 1 --output_dir../vision_and_language_data/resnet50_with_gcb_vqa_result\
     --inference_split val --inference_model_step 26400 \
-    --inference_txt_db /home/zhangzr/vision_and_language_data/data/txt_db/vqa/vqa_k_test.jsonl \
-    --inference_img_db /home/zhangzr/vision_and_language_data/data/vis_db/coco_train2014_val2014 \
+    --inference_txt_db ../vision_and_language_data/data/txt_db/vqa/vqa_k_test.jsonl \
+    --inference_img_db ../vision_and_language_data/data/vis_db/coco_train2014_val2014 \
     --inference_batch_size 2
    ```
 
@@ -395,10 +395,10 @@ unzip data.zip
    ```shell
     # inference resnet50withgcb vqa lessdata
     horovodrun -np 1 python run_vqa_resnet50with_gcb.py \
-    --do_inference 1 --output_dir /home/zhangzr/vision_and_language_data/resnet50_with_gcb_vqa_lessdata_result\
+    --do_inference 1 --output_dir ../vision_and_language_data/resnet50_with_gcb_vqa_lessdata_result\
     --inference_split val --inference_model_step 19200 \
-    --inference_txt_db /home/zhangzr/vision_and_language_data/data/txt_db/vqa/vqa_k_test.jsonl \
-    --inference_img_db /home/zhangzr/vision_and_language_data/data/vis_db/coco_train2014_val2014 \
+    --inference_txt_db ../vision_and_language_data/data/txt_db/vqa/vqa_k_test.jsonl \
+    --inference_img_db ../vision_and_language_data/data/vis_db/coco_train2014_val2014 \
     --inference_batch_size 2
    ```
 
